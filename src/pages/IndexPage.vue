@@ -4,7 +4,7 @@
   <div class="row q-col-gutter-md">
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" v-for="(course,i) in courses" :key="i">
 
-    <q-card class="dog-card flex column space-between full-height" flat bordered>
+    <q-card class="dog-card cursor-pointer flex column space-between full-height" flat bordered @click="$router.push({ name: 'page', params: { course: course.title } })">
       <q-img :src="course.image" />
 
       <q-card-section>
