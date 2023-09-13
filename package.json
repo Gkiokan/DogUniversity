@@ -1,9 +1,9 @@
 {
-  "name": "luki",
+  "name": "doguniversity",
   "version": "0.0.1",
   "description": "?",
-  "productName": "luki",
-  "author": "Gkiokan Sali <gkiokan@hotmail.de>",
+  "productName": "doguniversity",
+  "author": "G Magic",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
@@ -12,13 +12,15 @@
     "build": "quasar build"
   },
   "dependencies": {
-    "axios": "^1.2.1",
-    "vuex": "^4.0.1",
     "@quasar/extras": "^1.16.4",
+    "@videojs-player/vue": "^1.0.0",
+    "axios": "^1.2.1",
     "core-js": "^3.6.5",
     "quasar": "^2.6.0",
+    "video.js": "^8.5.2",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",

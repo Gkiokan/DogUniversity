@@ -1,9 +1,8 @@
 <template>
   <q-item
-    clickable
+    clickable exact
     tag="a"
-    target="_blank"
-    :href="link"
+    :to="link"
   >
     <q-item-section
       v-if="icon"
@@ -14,7 +13,7 @@
 
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label caption v-if="caption">{{ caption }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
@@ -36,8 +35,7 @@ export default defineComponent({
     },
 
     link: {
-      type: String,
-      default: '#'
+      default: '/'
     },
 
     icon: {
