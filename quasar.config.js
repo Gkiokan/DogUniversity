@@ -148,8 +148,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: 'luki',
-        short_name: 'luki',
+        name: 'DogUniversity',
+        short_name: 'DogUniversity',
         description: '?',
         display: 'standalone',
         orientation: 'portrait',
@@ -215,19 +215,19 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'luki'
+        appId: 'doguniversity'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain
 
       chainWebpackMain (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js'] }])
+        // chain.plugin('eslint-webpack-plugin')
+        //   .use(ESLintPlugin, [{ extensions: ['js'] }])
       },
 
       chainWebpackPreload (chain) {
-        chain.plugin('eslint-webpack-plugin')
-          .use(ESLintPlugin, [{ extensions: ['js'] }])
+        // chain.plugin('eslint-webpack-plugin')
+        //   .use(ESLintPlugin, [{ extensions: ['js'] }])
       }
 
     }
