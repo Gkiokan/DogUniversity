@@ -8,8 +8,18 @@
     <!-- </div> -->
 
     <div class="q-pa-md">
-        <div class="text-h3 text-light"> {{ title }} </div>
-        <!-- <pre>{{ course }}</pre> -->
+        <div class="text-h4 text-light"> {{ title }} </div>
+
+        <q-space style="height: 20px" />
+        <q-separator />
+        <q-space style="height: 20px" />
+
+        <div v-if="course">
+            <div class="text-h6"> {{ course.title }} </div>
+            <p style="max-width: 600px"> {{ course.description }}</p>
+        </div>
+
+        <pre v-if="false">{{ course }}</pre>
     </div>
 
     <q-space style="height: 100px" />
@@ -29,7 +39,10 @@ export default defineComponent({
     return {
       title: '-//-',
       course: null,
-      item: null
+      item: null,
+
+      foundChapter: null,
+      foundPage: null
     }
   },
 
@@ -66,13 +79,27 @@ export default defineComponent({
       const foundChapter = this.course.chapters.find(c => c.title == chapter)
       const foundPage = foundChapter.pages.find(p => p.title == page)
 
-      this.title = foundPage.title
+      this.foundChapter = foundChapter
+      this.foundPage = foundPage
+
       this.item = foundPage
+      this.setTitle()
     },
 
     findFirstEntry () {
-      console.log(this.course)
-      this.item = this.course.chapters[0].pages[0]
+      console.log('Find first Entry', this.course)
+
+      this.foundChapter = this.course.chapters[0]
+      this.foundPage = this.course.chapters[0].pages[0]
+
+      this.item = this.foundPage
+      this.setTitle()
+    },
+
+    setTitle () {
+      const pageTitle = this.item.title
+      this.$root.pageTitle = pageTitle
+      this.title = this.foundChapter.title + ' | ' + this.foundPage.title
     }
 
   }

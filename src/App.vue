@@ -13,7 +13,8 @@ export default defineComponent({
   data () {
     return {
       data,
-      selectedCourse: null
+      selectedCourse: null,
+      pageTitle: 'DogUniversity'
     }
   },
 

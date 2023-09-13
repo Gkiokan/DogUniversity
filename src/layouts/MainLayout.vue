@@ -13,10 +13,10 @@
         />
 
         <q-toolbar-title>
-          DogUniversity
+          {{ $root.pageTitle }}
         </q-toolbar-title>
 
-        <div> v{{ $q.version }}</div>
+        <div v-if="false"> v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -29,7 +29,7 @@
     >
       <q-list>
         <q-item-label header>
-          Dog University Menü
+          Dog University
         </q-item-label>
 
         <EssentialLink

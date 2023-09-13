@@ -9,7 +9,7 @@
 
       <q-card-section>
         <div class="text-overline text-orange-9"> {{ $helper.getChapterCount(course) }} Chapters </div>
-        <div class="text-h5 q-mt-sm q-mb-xs"> {{ course.title }}</div>
+        <div class="text-h5 q-mt-sm q-mb-xs"> {{ course.title }}</div>
         <div class="text-body1 text-grey-8">
           {{ course.description }}
         </div>
@@ -46,6 +46,7 @@ export default defineComponent({
 
   created () {
     this.$root.selectedCourse = null
+    this.$root.pageTitle = 'DogUniversity'
   },
 
   methods: {
