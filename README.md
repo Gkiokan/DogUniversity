@@ -1,6 +1,4 @@
-# luki (luki)
-
-?
+# DogUniversity
 
 ## Install the dependencies
 ```bash
@@ -24,9 +22,14 @@ npm run lint
 
 
 
-### Build the app for production
+### Build the app for production (SPA)
 ```bash
 quasar build
+```
+
+### Build the app for production (PWA)
+```bash
+quasar build -m pwa
 ```
 
 ### Customize the configuration
