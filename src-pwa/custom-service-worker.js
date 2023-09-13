@@ -40,6 +40,7 @@ self.addEventListener('message', (event) => {
   if (event.data.action == 'SKIP_WAITING') {
     console.log(':: SKIP WAITING - csw')
     self.skipWaiting()
+    window.NavigationPreloadManager()
   }
 
   console.log(':: message | ', event)
