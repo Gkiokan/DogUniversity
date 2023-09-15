@@ -1,6 +1,6 @@
 {
   "name": "doguniversity",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "?",
   "productName": "doguniversity",
   "author": "G Magic",
@@ -12,6 +12,7 @@
     "build": "quasar build"
   },
   "dependencies": {
+    "@quasar/cli": "^2.3.0",
     "@quasar/extras": "^1.16.4",
     "@videojs-player/vue": "^1.0.0",
     "axios": "^1.2.1",
